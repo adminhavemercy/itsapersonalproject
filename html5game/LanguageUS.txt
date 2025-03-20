@@ -293,12 +293,12 @@ attribute_Throwing	Throwing
 attribute_Stamina	Stamina
 attribute_Tackling	Tackling
 attribute_Blocking	Blocking
-attitude_0	Toxic
-attitude_1	Bad
-attitude_2	Poor
-attitude_3	Ok
-attitude_4	Good
-attitude_5	Great
+attitude_0	demand a trade
+attitude_1	angy
+attitude_2	sad
+attitude_3	meh
+attitude_4	chill
+attitude_5	happy
 attitude_6	very happy :D
 ui_Attitude	Morale
 ui_Rating	Rating
