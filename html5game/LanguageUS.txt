@@ -782,7 +782,7 @@ ui_Connecting	Connecting...
 ui_FavouriteTeam	who u like
 msg_Welcome_CO	Welcome to Retro Bowl College!##You are about to start your first season as the head coach of a college football team.##The path to success is an arduous one but if you believe in yourself and can inspire your team then glory awaits!#
 
-msg_Welcome	Welcome to Retro Bowl!##You are about to start your first season as the head coach of a pro football team.##The path to success is an arduous one but if you believe in yourself and can inspire your team then glory awaits!#
+msg_Welcome	Welcome to Retro Bowl!##You are a college student, and you're about to start your first season as the head coach of a college football team.##The path to success is an arduous one but if you believe in yourself and can inspire your team then glory awaits!#
 msg_LimitedVersion	*** Limited Version - $num games remaining ***
 ui_Tip	Tip
 ui_Tips	Tips

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+              body {
+            background-color: #007aff; /* Retro Bowl's blue color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 15px;
+            border-color: #ffffff;
+            font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            padding-bottom: 400px;
+        }
+
+        /* Retro-style Title */
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            color: #ffffff;
+            margin-bottom: 10px; /* Increased margin for spacing */
+            margin-top: 50px;
+        }
+
+      .button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* spacing between buttons */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+        
+
+
+
+    
+        @font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+button {
+    background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block; 
+    min-height: 60px; /* Set height same as the top 2 buttons */
+}
+
+        .gold {
+    background-color: #cfa527;
+    color: white;
+    border-color: white;
+    padding: 20px 20px; /* Increased padding for larger buttons */
+    font-size: 22px; /* Increased font size for better readability */
+}
+        .gold:hover {
+            background-color: #9c7c1c;
+        }
+        .gold:active {
+            background-color:#755d13;
+        }
+
+        .lb {
+            background-color: #71a9bf;
+            
+        }
+
+        .lb:hover {
+            background-color: #4f7d9e;
+        }
+        .lb:active {
+            background-color: #3a5f7c;
+        } 
+
+        button:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        button:active {
+    background-color: #003d7a;
+    box-shadow: none; /* Remove shadow when pressed */
+    transform: translate(4px, 4px); /* Create an instant offset effect */
+}
+
+        /* Style for custom "Choose File" button */
+        #customFileInput {
+            background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block;
+    
+        }
+
+        #customFileInput:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        #customFileInput:active {
+            background-color: #003d7a; /* Even darker blue on click */
+            transform: scale(0.95); /* Press-down effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow for press effect */
+        }
+
+        /* Hide the actual file input button */
+        input[type="file"] {
+            display: none;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the file input and import button */
+            width: 100%;
+            grid-column: span 2;
+            height: 100px;
+        }
+
+
+
+        label {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5; /* Increased line-height for label */
+    padding: 10px 0; /* Added padding for more spacing around label text */
+    margin-bottom: 10px; /* Space between label and input */
+    width: 100%; /* Ensure label spans the full width */
+   
+}
+
+.button-container .data {
+    height: 80px;
+margin-top: -10px;
+width: 100%;
+grid-column: span 2;
+}
+
+
+        input[type="text"] {
+            background-color: #222;
+            border: 4px solid #ffffff; /* Thicker and more pixelated white border */
+            color: #ffffff;
+            padding: 16px 30px; /* Added more padding for text input */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 30px; /* Increased margin for spacing between input and button */
+            width: 100%; /* Full width for the text input */
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00ff00; /* Retro green focus border */
+        }
+            #questionButton {
+           position: fixed;
+           top: 20px;
+           left: 20px;
+           width: 40px;
+           height: 40px;
+           background-color: #2378ff;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 20px;
+         color: #ffffff;
+
+
+           border: 2px solid rgb(255, 255, 255);
+           cursor: pointer;
+           z-index: 1000;
+           transition: background-color 0.3s ease;
+           font-family: 'Press Start 2P'; /* Monospaced font for a pixel-like effect */
+           image-rendering: pixelated; /* Makes the button pixelated */
+           box-shadow: -4px 4px 0px #4a4a4a;
+            }
+/* Style for Blackjack button (Casino-style) */
+.blackjack {
+           background-color: #ff0000; /* Casino red background */
+           color: #ffffff; /* White text */
+           font-family: 'Press Start 2P', cursive;
+           font-size: 22px; /* Larger font for emphasis */
+           padding: 18px 40px; /* Increased padding */
+           text-transform: uppercase;
+           border: 4px solid #ffffff; /* White border */
+           border-radius: 0px; /* No rounded edges */
+           position: relative;
+           cursor: pointer;
+           box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+           text-align: center;
+           grid-column: span 2; /* Span across two columns */
+           height: 90px; /* Set height same as the top 2 buttons */
+       }
+
+
+       .blackjack:hover {
+           background-color: #e60000; /* Darker red on hover */
+           transform: scale(1.05);
+       }
+
+
+       .blackjack:active {
+           background-color: #b30000;
+           box-shadow: none;
+           transform: translate(4px, 4px);
+       }
+
+       .green {
+    background-color: #1e9423;
+    color: white;
+    border-color: white;
+    padding: 20px 20px; /* Increased padding for larger buttons */
+    font-size: 22px; /* Increased font size for better readability */
+}
+        .green:hover {
+            background-color: #197a1e;
+        }
+        .green:active {
+            background-color:#115714;
+        }
+        .stadium {
+    background-color: #4c21a4;
+    color: white;
+    border-color: white;
+    padding: 20px 20px; /* Increased padding for larger buttons */
+    font-size: 17px; /* Increased font size for better readability */
+}
+        .stadium:hover {
+            background-color: #3a187e;
+        }
+        .stadium:active {
+            background-color:#230d4e;
+        }
+        #training {
+    background-color: #6f12ad;
+    color: white;
+    border-color: white;
+    padding: 20px 20px; /* Increased padding for larger buttons */
+    font-size: 17px; /* Increased font size for better readability */
+}
+        #training:hover {
+            background-color: #530e82;
+        }
+        #training:active {
+            background-color:#340951;
+        }
+
+        #rehab {
+        background-color: #6e2611;
+        }
+        #rehab:hover {
+        background-color: #4a190b;
+        }
+        #rehab:active {
+        background-color: #290e05;
+        }
+
+        #export {
+            background-color:#8f8f8f;
+            height:80px;
+            grid-column: span 2; /* Span across two columns */
+        }
+        #export:hover {
+            background-color:#696969;
+        }
+        #export:active {
+            background-color:#434343;
+        }
+
+        .color {
+           background-color: #ffffff; /* Casino red background */
+           color: #000000; /* White text */
+           font-family: 'Press Start 2P', cursive;
+           font-size: 22px; /* Larger font for emphasis */
+           padding: 18px 40px; /* Increased padding */
+           text-transform: uppercase;
+           border: 4px solid #000000; /* White border */
+           border-radius: 0px; /* No rounded edges */
+           position: relative;
+           cursor: pointer;
+           box-shadow: -4px 4px 0px #e1e1e1; /* Pixel shadow effect */
+           text-align: center;
+           grid-column: span 2; /* Span across two columns */
+           height: 90px; /* Set height same as the top 2 buttons */
+       }
+
+
+       .color:hover {
+           background-color: #c8c8c8; /* Darker red on hover */
+           transform: scale(1.05);
+       }
+
+
+       .color:active {
+           background-color: #8b8b8b;
+           box-shadow: none;
+           transform: translate(4px, 4px);
+       }
+
+       .big{
+        grid-column: span 2;
+        height:75px;
+       } 
+
+         #colorPicker {
+            width: 210%;
+            height: 40px;
+         }
+
+         #colorPicker2 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+
+         #colorPicker3 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+
+         .hunger-bar-container {
+  position: fixed;
+  top: 60px; /* a bit below cc bar (10px + cc bar height ~40-50px) */
+  right: 30px;
+  width: 300px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #555;
+}
+
+    </style>
+
+    <!-- Importing a retro pixelated font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Grades | Schoology</title>
+    <link rel="icon" href="schoology.png" type="image/x-icon" />
+        </head>
+        <body>
+<h1>College Life</h1>
+    <h2 id="name">hi</h2>
+<div class="cc" style="
+  position: fixed; 
+  top: 20px; 
+  right: 70px; 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  border: 3.5px solid #ffffff; 
+  border-radius: 12px; 
+  padding: 6px 12px;
+
+  z-index: 1000;
+">
+        <img src="Screen_Shot_2025-07-27_at_6.56.14_PM-removebg-preview (2).png" alt="error" style="height: 25px; width: auto">
+
+        <p id="credits">loading...</p>
+    </div>
+
+    <div class="hunger-bar-container" id="hungerBarContainer" style="position: fixed; top: 115px; right: 30px; width: 300px; height: 30px; background-color: #ddd; border-radius: 15px; overflow: hidden; border: 2px solid #555; z-index: 1000;">
+  <div class="hunger-bar-fill" id="hungerBar" style="height: 100%; width: 100%; background: linear-gradient(90deg, #2167d0, #93aefa); border-radius: 15px 0 0 15px; transition: width 0.3s ease;"></div>
+</div>
+<p id="hungerValue" style="position: fixed; top: 150px; right: 80px; color: white; font-weight: bold;">Hunger: 100%</p>
+
+
+    <div class="button-container">
+        <button onclick="location.href='pantry.html'">Eat </button> 
+        <button onclick="location.href='study.html'">Study</button>
+        <button onclick="location.href='schedule.html'">Schedule</button>
+        <button onclick="location.href='grades.html'">Grades</button>
+
+    </div>
+
+<script>
+  function loadIniFile(callback) {
+  const data = localStorage.getItem("RetroBowl.0.savedata.ini");
+  if (data) {
+    callback(data);
+  } else {
+    alert("No save data found.");
+  }
+}
+
+loadIniFile(function(data) {
+  // Extract fname and lname
+  const fnameMatch = data.match(/fname="?([^"\n]*)"?/);
+  const lnameMatch = data.match(/lname="?([^"\n]*)"?/);
+
+  const fname = fnameMatch ? fnameMatch[1].trim() : "Unknown";
+  const lname = lnameMatch ? lnameMatch[1].trim() : "";
+
+  // Update name
+  const message = `Welcome, ${fname} ${lname}`.trim();
+  document.getElementById("name").textContent = message;
+
+  // Extract and update coach_credit
+  const coach_creditMatch = data.match(/coach_credit="?([^"\n]*)"?/);
+  const coach_credit = coach_creditMatch ? coach_creditMatch[1].trim() : "0";
+  document.getElementById("credits").textContent = coach_credit;
+});
+
+
+function loadRetroBowlSave() {
+  return localStorage.getItem("RetroBowl.0.savedata.ini") || null;
+}
+
+function saveRetroBowlSave(data) {
+  localStorage.setItem("RetroBowl.0.savedata.ini", data);
+}
+
+function getValueFromIni(data, key) {
+  const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+  return match ? parseInt(match[1]) : null;
+}
+
+function setValueInIni(data, key, value) {
+  if (data.match(new RegExp(`${key}="?([0-9]+)"?`))) {
+    return data.replace(new RegExp(`${key}="?([0-9]+)"?`), `${key}="${value}"`);
+  } else {
+    return data + `\n${key}="${value}"`;
+  }
+}
+
+function updateHungerBar(hunger) {
+  const bar = document.getElementById("hungerBar");
+  const label = document.getElementById("hungerValue");
+  hunger = Math.min(100, Math.max(0, hunger));
+  bar.style.width = hunger + "%";
+  label.textContent = `Hunger: ${hunger}%`;
+}
+
+function calculateElapsedMinutes(lastTime) {
+  const now = Date.now();
+  const elapsedMs = now - lastTime;
+  return Math.floor(elapsedMs / (1000 * 60)); // minutes
+}
+
+function init() {
+  let data = loadRetroBowlSave();
+  if (!data) {
+    alert("No RetroBowl save data found.");
+    return;
+  }
+
+  let hunger = getValueFromIni(data, "hunger");
+  let lastUpdated = getValueFromIni(data, "hunger_updated");
+
+  const now = Date.now();
+
+  // Initialize if not set
+  if (hunger === null) hunger = 100;
+  if (lastUpdated === null) lastUpdated = now;
+
+  // How many 5-minute blocks passed?
+  const minutesPassed = calculateElapsedMinutes(lastUpdated);
+  const hungerLost = Math.floor(minutesPassed / 5);
+  hunger = Math.max(0, hunger - hungerLost);
+
+  // Save updated values back to .ini
+  data = setValueInIni(data, "hunger", hunger);
+  data = setValueInIni(data, "hunger_updated", now);
+  saveRetroBowlSave(data);
+
+  updateHungerBar(hunger);
+
+  // Live ticking every 5 minutes
+  setInterval(() => {
+    let liveData = loadRetroBowlSave();
+    let currentHunger = getValueFromIni(liveData, "hunger") || 0;
+
+    if (currentHunger > 0) {
+      currentHunger--;
+      const updatedData = setValueInIni(
+        setValueInIni(liveData, "hunger", currentHunger),
+        "hunger_updated",
+        Date.now()
+      );
+      saveRetroBowlSave(updatedData);
+      updateHungerBar(currentHunger);
+    }
+  }, 300000);
+}
+
+window.onload = init;
+
+
+
+
+
+
+
+    </script>
+    </body>
+</html>

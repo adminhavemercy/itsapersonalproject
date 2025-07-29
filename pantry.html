@@ -1,0 +1,687 @@
+<!DOCTYPE html><html>
+    <head>
+          <style>
+              body {
+            background-color: #007aff; /* Retro Bowl's blue color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 15px;
+            border-color: #ffffff;
+            font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            padding-bottom: 400px;
+        }
+
+        /* Retro-style Title */
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            color: #ffffff;
+            margin-bottom: 10px; /* Increased margin for spacing */
+            margin-top: 50px;
+        }
+
+      .button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* spacing between buttons */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+        
+
+
+
+    
+        @font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+button {
+    background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block; 
+    min-height: 60px; /* Set height same as the top 2 buttons */
+}
+
+#storeButton {
+    background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: fixed; /* Fixed position */
+    top: 15px; /* 10px from top */
+    left: 20px; /* 10px from left */
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block;
+    min-height: 60px; /* Same height as other buttons */
+    z-index: 1000; /* Stay on top */
+}
+
+
+       
+
+        button:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        button:active {
+    background-color: #003d7a;
+    box-shadow: none; /* Remove shadow when pressed */
+    transform: translate(4px, 4px); /* Create an instant offset effect */
+}
+
+        /* Style for custom "Choose File" button */
+        #customFileInput {
+            background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block;
+    
+        }
+
+        #customFileInput:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        #customFileInput:active {
+            background-color: #003d7a; /* Even darker blue on click */
+            transform: scale(0.95); /* Press-down effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow for press effect */
+        }
+
+        /* Hide the actual file input button */
+        input[type="file"] {
+            display: none;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the file input and import button */
+            width: 100%;
+            grid-column: span 2;
+            height: 100px;
+        }
+
+
+
+        label {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5; /* Increased line-height for label */
+    padding: 10px 0; /* Added padding for more spacing around label text */
+    margin-bottom: 10px; /* Space between label and input */
+    width: 100%; /* Ensure label spans the full width */
+   
+}
+
+.button-container .data {
+    height: 80px;
+margin-top: -10px;
+width: 100%;
+grid-column: span 2;
+}
+
+
+        input[type="text"] {
+            background-color: #222;
+            border: 4px solid #ffffff; /* Thicker and more pixelated white border */
+            color: #ffffff;
+            padding: 16px 30px; /* Added more padding for text input */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 30px; /* Increased margin for spacing between input and button */
+            width: 100%; /* Full width for the text input */
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00ff00; /* Retro green focus border */
+        }
+            #questionButton {
+           position: fixed;
+           top: 20px;
+           left: 20px;
+           width: 40px;
+           height: 40px;
+           background-color: #2378ff;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 20px;
+         color: #ffffff;
+
+
+           border: 2px solid rgb(255, 255, 255);
+           cursor: pointer;
+           z-index: 1000;
+           transition: background-color 0.3s ease;
+           font-family: 'Press Start 2P'; /* Monospaced font for a pixel-like effect */
+           image-rendering: pixelated; /* Makes the button pixelated */
+           box-shadow: -4px 4px 0px #4a4a4a;
+            }
+
+
+       .big{
+        grid-column: span 2;
+        height:75px;
+       } 
+
+         #colorPicker {
+            width: 210%;
+            height: 40px;
+         }
+
+         #colorPicker2 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+
+         #colorPicker3 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+         .wrapper
+         { display: flex;
+  flex-direction: column;
+  align-items: center;}
+
+.marginFood {
+  margin-top: 10px;
+}
+
+
+         .hunger-bar-container {
+  position: fixed;
+  top: 60px; /* a bit below cc bar (10px + cc bar height ~40-50px) */
+  right: 30px;
+  width: 300px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #555;
+}
+
+    </style>
+
+    <!-- Importing a retro pixelated font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Grades | Schoology</title>
+    <link rel="icon" href="schoology.png" type="image/x-icon" />    
+    </head>
+    <body>
+        <div class="cc" style="
+  position: fixed; 
+  top: 20px; 
+  right: 70px; 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  border: 3.5px solid #ffffff; 
+  border-radius: 12px; 
+  padding: 6px 12px;
+
+  z-index: 1000;
+">
+        <img src="Screen_Shot_2025-07-27_at_6.56.14_PM-removebg-preview (2).png" alt="error" style="height: 25px; width: auto;">
+
+        <p id="credits">loading...</p>
+    </div>
+
+    <div class="hunger-bar-container" id="hungerBarContainer" style="position: fixed; top: 115px; right: 30px; width: 300px; height: 30px; background-color: #ddd; border-radius: 15px; overflow: hidden; border: 2px solid #555; z-index: 1000;">
+  <div class="hunger-bar-fill" id="hungerBar" style="height: 100%; width: 100%; background: linear-gradient(90deg, #2167d0, #93aefa); border-radius: 15px 0 0 15px; transition: width 0.3s ease;"></div>
+</div>
+<p id="hungerValue" style="position: fixed; top: 150px; right: 80px; color: white; font-weight: bold;">Hunger: Loading...</p>
+<button id="storeButton" onclick="window.location.href='foodStore.html'">Food Store</button>
+
+
+<h2>Pantry:</h2>
+<div class="button-container">
+  <div class="wrapper">
+    <button onclick="eatBurger()">Burger</button>
+    <div id="burgerCount" class="marginFood">Burgers: 0</div>
+  </div>
+  <div class="wrapper">
+    <button onclick="eatPizza()">Pizza</button>
+    <div id="pizzasCount" class="marginFood">Pizzas: 0</div>
+  </div>
+   <div class="wrapper">
+    <button onclick="eatTacos()">Taco</button>
+    <div id="tacosCount" class="marginFood">Tacos: 0</div>
+  </div>
+</div>
+
+<script>
+function loadIniFile(callback) {
+  const data = localStorage.getItem("RetroBowl.0.savedata.ini");
+  if (data) {
+    callback(data);
+  } else {
+    alert("No save data found.");
+  }
+}
+
+const HungerManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  get hunger() {
+    const data = this.loadIni();
+    return this.getValue(data, "hunger") ?? 100;
+  },
+
+  set hunger(val) {
+    const clamped = Math.min(100, Math.max(0, Math.floor(val)));
+    let data = this.loadIni();
+    data = this.setValue(data, "hunger", clamped);
+    data = this.setValue(data, "hunger_updated", Date.now());
+    this.saveIni(data);
+    updateHungerBar(clamped);
+  },
+
+  syncFromTimestamp() {
+    let data = this.loadIni();
+    let hunger = this.getValue(data, "hunger");
+    let lastUpdated = this.getValue(data, "hunger_updated");
+    const now = Date.now();
+
+    if (hunger === null) hunger = 100;
+    if (lastUpdated === null) lastUpdated = now;
+
+    const elapsedMin = Math.floor((now - lastUpdated) / (1000 * 60));
+    const hungerLost = Math.floor(elapsedMin / 5);
+    hunger = Math.max(0, hunger - hungerLost);
+
+    data = this.setValue(data, "hunger", hunger);
+    data = this.setValue(data, "hunger_updated", now);
+    this.saveIni(data);
+    return hunger;
+  }
+};
+
+const BurgersManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  get burgers() {
+    const data = this.loadIni();
+    return this.getValue(data, "burgers") ?? 0;
+  },
+
+  set burgers(val) {
+    const clamped = Math.max(0, Math.floor(val));
+    let data = this.loadIni();
+    data = this.setValue(data, "burgers", clamped);
+    this.saveIni(data);
+  },
+
+  init() {
+    let data = this.loadIni();
+    if (this.getValue(data, "burgers") === null) {
+      data = this.setValue(data, "burgers", 0);
+      this.saveIni(data);
+    }
+  }
+};
+
+function updateHungerBar(hunger) {
+  const bar = document.getElementById("hungerBar");
+  const label = document.getElementById("hungerValue");
+  hunger = Math.min(100, Math.max(0, hunger));
+  if (bar) bar.style.width = hunger + "%";
+  if (label) label.textContent = `Hunger: ${hunger}%`;
+}
+
+// Right after BurgersManager definition, before init()
+
+function updateBurgerCount() {
+  const countEl = document.getElementById("burgerCount");
+  if (countEl) {
+    countEl.textContent = `Burgers: ${BurgersManager.burgers}`;
+  }
+}
+
+
+const PizzasManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  get pizzas() {
+    const data = this.loadIni();
+    return this.getValue(data, "pizzas") ?? 0;
+  },
+
+  set pizzas(val) {
+    const clamped = Math.max(0, Math.floor(val));
+    let data = this.loadIni();
+    data = this.setValue(data, "pizzas", clamped);
+    this.saveIni(data);
+  },
+
+  init() {
+    let data = this.loadIni();
+    if (this.getValue(data, "pizzas") === null) {
+      data = this.setValue(data, "pizzas", 2);
+      this.saveIni(data);
+    }
+  }
+};
+
+
+// Right after BurgersManager definition, before init()
+
+function updatePizzasCount() {
+  const countEl = document.getElementById("pizzasCount");
+  if (countEl) {
+    countEl.textContent = `Pizzas: ${PizzasManager.pizzas}`;
+  }
+}
+
+const TacosManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  get tacos() {
+    const data = this.loadIni();
+    return this.getValue(data, "tacos") ?? 0;
+  },
+
+  set tacos(val) {
+    const clamped = Math.max(0, Math.floor(val));
+    let data = this.loadIni();
+    data = this.setValue(data, "tacos", clamped);
+    this.saveIni(data);
+  },
+
+  init() {
+    let data = this.loadIni();
+    if (this.getValue(data, "tacos") === null) {
+      data = this.setValue(data, "tacos", 2);
+      this.saveIni(data);
+    }
+  }
+};
+
+
+// Right after BurgersManager definition, before init()
+
+function updateTacosCount() {
+  const countEl = document.getElementById("tacosCount");
+  if (countEl) {
+    countEl.textContent = `Tacos: ${TacosManager.tacos}`;
+  }
+}
+
+function init(data) {
+  // Display name and credits
+  const fnameMatch = data.match(/fname="?([^"\n]*)"?/);
+  const lnameMatch = data.match(/lname="?([^"\n]*)"?/);
+
+  const fname = fnameMatch ? fnameMatch[1].trim() : "Unknown";
+  const lname = lnameMatch ? lnameMatch[1].trim() : "";
+  const message = `Welcome, ${fname} ${lname}`.trim();
+  if (document.getElementById("name")) {
+    document.getElementById("name").textContent = message;
+  }
+
+  const coach_creditMatch = data.match(/coach_credit="?([^"\n]*)"?/);
+  const coach_credit = coach_creditMatch ? coach_creditMatch[1].trim() : "0";
+  if (document.getElementById("credits")) {
+    document.getElementById("credits").textContent = coach_credit;
+  }
+
+  // Initialize burgers key if missing
+  BurgersManager.init();
+  updateBurgerCount();
+
+    PizzasManager.init();
+  updatePizzasCount();
+
+  TacosManager.init();
+  updateTacosCount();
+
+  // Hunger sync and update
+  const currentHunger = HungerManager.syncFromTimestamp();
+  updateHungerBar(currentHunger);
+
+  console.log("Burgers:", BurgersManager.burgers);
+}
+
+// Load and init on page load
+window.addEventListener("load", () => {
+  loadIniFile(init);
+});
+
+
+
+
+
+function eatBurger() {
+  if (HungerManager.hunger >= 100) {
+    alert("you dont need food fatty dang casoh looking ahh");
+    return;
+  }
+
+  if (BurgersManager.burgers <= 0) {
+    alert("You have no burgers to eat!");
+    return;
+  }
+
+  BurgersManager.burgers -= 1; // Decrease burger count
+  HungerManager.hunger += 30;
+
+  // List of random alert messages
+  const messages = [
+    "You ate a burger!",
+    "Yum! That cheeseburger hits the spot!",
+    "Mmm... mystery meat?",
+    "FATTY",
+    "You know that burger was on the floor right?",
+    "That burger is 5 years old yk...",
+    "You inhaled a burger.",
+    "Burger consumed. Hunger satisfied (for now)."
+  ];
+
+  // Pick a random message
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  alert(randomMessage);
+}
+
+
+function eatPizza() {
+  if (HungerManager.hunger >= 100) {
+    alert("you dont need food fatty dang casoh looking ahh");
+    return;
+  }
+
+  if (PizzasManager.pizzas <= 0) {
+    alert("You have no pizzas to eat!");
+    return;
+  }
+
+  PizzasManager.pizzas -= 1; // Decrease pizza count
+  HungerManager.hunger += 60;
+
+  // List of random alert messages
+  const messages = [
+    "You ate a pizza!",
+    "Yum! That pizza hits the spot!",
+    "FATTY",
+    "You know that pizza was on the floor right?",
+    "That pizza is 5 years old yk...",
+    "You inhaled a pizza.",
+    "Pizza consumed. Hunger satisfied (for now)."
+  ];
+
+  // Pick a random message
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  alert(randomMessage);
+}
+
+function eatTacos() {
+  if (HungerManager.hunger >= 100) {
+    alert("you dont need food fatty dang casoh looking ahh");
+    return;
+  }
+
+  if (TacosManager.tacos <= 0) {
+    alert("You have no tacos to eat!");
+    return;
+  }
+
+  TacosManager.tacos -= 1; // Decrease taco count
+  HungerManager.hunger += 40;
+
+  // List of random alert messages
+  const messages = [
+    "You ate a taco!",
+    "Yum! That taco hits the spot!",
+    "FATTY",
+    "You know that taco was on the floor right?",
+    "That taco is 5 years old yk...",
+    "You inhaled a taco.",
+    "Taco consumed. Hunger satisfied (for now)."
+  ];
+
+  // Pick a random message
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+  alert(randomMessage);
+}
+</script>
+    </body>
+</html>

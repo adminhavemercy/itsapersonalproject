@@ -1,0 +1,654 @@
+<!DOCTYPE HTML>
+<html> 
+    <head>
+      <style>
+              body {
+            background-color: #007aff; /* Retro Bowl's blue color */
+            border-style: solid;
+            border-width: 5px;
+            border-radius: 15px;
+            border-color: #ffffff;
+            font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            color: #ffffff;
+            padding-bottom: 400px;
+        }
+
+        /* Retro-style Title */
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            color: #ffffff;
+            margin-bottom: 10px; /* Increased margin for spacing */
+            margin-top: 50px;
+        }
+
+      .button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* spacing between buttons */
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+        
+
+
+
+    
+        @font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+button {
+    background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block; 
+    min-height: 60px; /* Set height same as the top 2 buttons */
+}
+
+#storeButton {
+    background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: fixed; /* Fixed position */
+    top: 15px; /* 10px from top */
+    left: 20px; /* 10px from left */
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block;
+    min-height: 60px; /* Same height as other buttons */
+    z-index: 1000; /* Stay on top */
+}
+
+
+       
+
+        button:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        button:active {
+    background-color: #003d7a;
+    box-shadow: none; /* Remove shadow when pressed */
+    transform: translate(4px, 4px); /* Create an instant offset effect */
+}
+
+        /* Style for custom "Choose File" button */
+        #customFileInput {
+            background-color: #2378ff; /* Blue background */
+    color: #ffffff; /* White text */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    border: 4px solid #ffffff; /* White border */
+    border-radius: 0px; /* No rounded edges */
+    position: relative;
+    cursor: pointer;
+    box-shadow: -4px 4px 0px #4a4a4a; /* Pixel shadow effect */
+    text-align: center;
+    display: inline-block;
+    
+        }
+
+        #customFileInput:hover {
+            background-color: #005cbf; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        #customFileInput:active {
+            background-color: #003d7a; /* Even darker blue on click */
+            transform: scale(0.95); /* Press-down effect */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Drop shadow for press effect */
+        }
+
+        /* Hide the actual file input button */
+        input[type="file"] {
+            display: none;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between the file input and import button */
+            width: 100%;
+            grid-column: span 2;
+            height: 100px;
+        }
+
+
+
+        label {
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5; /* Increased line-height for label */
+    padding: 10px 0; /* Added padding for more spacing around label text */
+    margin-bottom: 10px; /* Space between label and input */
+    width: 100%; /* Ensure label spans the full width */
+   
+}
+
+.button-container .data {
+    height: 80px;
+margin-top: -10px;
+width: 100%;
+grid-column: span 2;
+}
+
+
+        input[type="text"] {
+            background-color: #222;
+            border: 4px solid #ffffff; /* Thicker and more pixelated white border */
+            color: #ffffff;
+            padding: 16px 30px; /* Added more padding for text input */
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-bottom: 30px; /* Increased margin for spacing between input and button */
+            width: 100%; /* Full width for the text input */
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00ff00; /* Retro green focus border */
+        }
+            #questionButton {
+           position: fixed;
+           top: 20px;
+           left: 20px;
+           width: 40px;
+           height: 40px;
+           background-color: #2378ff;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 20px;
+         color: #ffffff;
+
+
+           border: 2px solid rgb(255, 255, 255);
+           cursor: pointer;
+           z-index: 1000;
+           transition: background-color 0.3s ease;
+           font-family: 'Press Start 2P'; /* Monospaced font for a pixel-like effect */
+           image-rendering: pixelated; /* Makes the button pixelated */
+           box-shadow: -4px 4px 0px #4a4a4a;
+            }
+
+
+       .big{
+        grid-column: span 2;
+        height:75px;
+       } 
+
+         #colorPicker {
+            width: 210%;
+            height: 40px;
+         }
+
+         #colorPicker2 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+
+         #colorPicker3 {
+            width: 44.3%;
+            height: 40px;
+            margin-top: 20px;
+         }
+
+         .wrapper
+         { display: flex;
+  flex-direction: column;
+  align-items: center;}
+
+.marginFood {
+  margin-top: 10px;
+}
+
+
+         .hunger-bar-container {
+  position: fixed;
+  top: 60px; /* a bit below cc bar (10px + cc bar height ~40-50px) */
+  right: 30px;
+  width: 300px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #555;
+}
+
+    </style>
+
+    <!-- Importing a retro pixelated font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Grades | Schoology</title>
+    <link rel="icon" href="schoology.png" type="image/x-icon" />    
+    </head>
+    <body>
+         <div class="cc" style="
+  position: fixed; 
+  top: 20px; 
+  right: 70px; 
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  border: 3.5px solid #ffffff; 
+  border-radius: 12px; 
+  padding: 6px 12px;
+
+  z-index: 1000;
+">
+        <img src="Screen_Shot_2025-07-27_at_6.56.14_PM-removebg-preview (2).png" alt="error" style="height: 25px; width: auto;">
+
+        <p id="credits">loading...</p>
+    </div>
+
+    <div class="hunger-bar-container" id="hungerBarContainer" style="position: fixed; top: 115px; right: 30px; width: 300px; height: 30px; background-color: #ddd; border-radius: 15px; overflow: hidden; border: 2px solid #555; z-index: 1000;">
+  <div class="hunger-bar-fill" id="hungerBar" style="height: 100%; width: 100%; background: linear-gradient(90deg, #2167d0, #93aefa); border-radius: 15px 0 0 15px; transition: width 0.3s ease;"></div>
+</div>
+<p id="hungerValue" style="position: fixed; top: 150px; right: 80px; color: white; font-weight: bold;">Hunger: Loading...</p>
+<button id="storeButton" onclick="window.location.href='pantry.html'">Pantry</button>
+
+
+<div>
+  <h1 style="text-align: center; margin: 30px;">Food Shop</h1>
+  <div class="button-container" style="display: flex; flex-direction: column; gap: 15px;">
+  <!-- Burger stock + buy button -->
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div id="burgerStock">Burgers: 0</div>
+    <button id="buyBurgerBtn">Buy 1 Burger (15 cc)</button>
+  </div>
+
+  <!-- Taco stock + buy button -->
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div id="tacoStock">Tacos: 0</div>
+    <button id="buyTacoBtn">Buy 1 Taco (12 cc)</button>
+  </div>
+
+  <!-- Pizza stock + buy button -->
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div id="pizzaStock">Pizzas: 0</div>
+    <button id="buyPizzaBtn">Buy 1 Pizza (25 cc)</button>
+  </div>
+</div>
+<p id="restockTimer" style="position: fixed; top: 60px; right: 70px; color: white; font-weight: bold;">
+  Loading restock timer...
+</p>
+
+<script>
+
+function loadIniFile(callback) {
+  const data = localStorage.getItem("RetroBowl.0.savedata.ini");
+  if (data) {
+    callback(data);
+  } else {
+    alert("No save data found.");
+  }
+}
+
+const HungerManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  syncFromTimestamp() {
+    let data = this.loadIni();
+    let hunger = this.getValue(data, "hunger");
+    let lastUpdated = this.getValue(data, "hunger_updated");
+    const now = Date.now();
+
+    if (hunger === null) hunger = 100;
+    if (lastUpdated === null) lastUpdated = now;
+
+    const elapsedMin = Math.floor((now - lastUpdated) / (1000 * 60));
+    const hungerLost = Math.floor(elapsedMin / 5);
+    hunger = Math.max(0, hunger - hungerLost);
+
+    data = this.setValue(data, "hunger", hunger);
+    data = this.setValue(data, "hunger_updated", now);
+    this.saveIni(data);
+    return hunger;
+  }
+};
+
+
+const ShopManager = {
+  iniKey: "RetroBowl.0.savedata.ini",
+
+  loadIni() {
+    return localStorage.getItem(this.iniKey) || "";
+  },
+
+  saveIni(data) {
+    localStorage.setItem(this.iniKey, data);
+  },
+
+  getValue(data, key) {
+    const match = data.match(new RegExp(`${key}="?([0-9]+)"?`));
+    return match ? parseInt(match[1]) : null;
+  },
+
+  setValue(data, key, value) {
+    const regex = new RegExp(`${key}="?([0-9]+)"?`);
+    if (regex.test(data)) {
+      return data.replace(regex, `${key}="${value}"`);
+    } else {
+      return data + `\n${key}="${value}"`;
+    }
+  },
+
+  maybeRestock() {
+    let data = this.loadIni();
+    const lastUpdate = this.getValue(data, "shop_updated") || 0;
+    const now = Date.now();
+
+    if (now - lastUpdate < 5 * 60 * 1000) return; // less than 5 mins, no restock
+
+    const burgers = Math.random() < 0.4 ? Math.floor(Math.random() * 3) + 1 : 0;
+    const tacos = Math.random() < 0.3 ? Math.floor(Math.random() * 5) + 1 : 0;
+    const pizzas = Math.random() < 0.2 ? Math.floor(Math.random() * 2) + 1 : 0;
+
+    data = this.setValue(data, "burgerStock", burgers);
+    data = this.setValue(data, "tacoStock", tacos);
+    data = this.setValue(data, "pizzaStock", pizzas);
+    data = this.setValue(data, "shop_updated", now);
+    this.saveIni(data);
+  },
+
+  getStock() {
+    const data = this.loadIni();
+    return {
+      burgers: this.getValue(data, "burgerStock") || 0,
+      tacos: this.getValue(data, "tacoStock") || 0,
+      pizzas: this.getValue(data, "pizzaStock") || 0
+    };
+  }
+};
+
+
+
+function updateHungerBar(hunger) {
+  const bar = document.getElementById("hungerBar");
+  const label = document.getElementById("hungerValue");
+  if (bar) bar.style.width = `${hunger}%`;
+  if (label) label.textContent = `Hunger: ${hunger}%`;
+}
+
+function updateCreditsDisplay(credits) {
+  const el = document.getElementById("credits");
+  if (el) el.textContent = credits;
+}
+
+function updateShopDisplay() {
+  ShopManager.maybeRestock();
+  const data = ShopManager.loadIni();
+
+  const stock = {
+    burgers: ShopManager.getValue(data, "burgerStock") || 0,
+    tacos: ShopManager.getValue(data, "tacoStock") || 0,
+    pizzas: ShopManager.getValue(data, "pizzaStock") || 0
+  };
+
+  const inventory = {
+    burgers: ShopManager.getValue(data, "burgers") || 0,
+    tacos: ShopManager.getValue(data, "tacos") || 0,
+    pizzas: ShopManager.getValue(data, "pizzas") || 0
+  };
+
+  document.getElementById("burgerStock").textContent = `Burgers: ${stock.burgers}`;
+  document.getElementById("tacoStock").textContent = `Tacos: ${stock.tacos}`;
+  document.getElementById("pizzaStock").textContent = `Pizzas: ${stock.pizzas}`;
+
+  document.getElementById("burgerInventory").textContent = `Inventory: ${inventory.burgers}`;
+  document.getElementById("tacoInventory").textContent = `Inventory: ${inventory.tacos}`;
+  document.getElementById("pizzaInventory").textContent = `Inventory: ${inventory.pizzas}`;
+
+  const credits = ShopManager.getValue(data, "coach_credit") || 0;
+  updateCreditsDisplay(credits);
+}
+
+function init(data) {
+  // Display player name
+  const fnameMatch = data.match(/fname="?([^"\n]*)"?/);
+  const lnameMatch = data.match(/lname="?([^"\n]*)"?/);
+  const fname = fnameMatch ? fnameMatch[1].trim() : "Unknown";
+  const lname = lnameMatch ? lnameMatch[1].trim() : "";
+  const welcomeMessage = `Welcome, ${fname} ${lname}`.trim();
+  const nameElem = document.getElementById("name");
+  if (nameElem) nameElem.textContent = welcomeMessage;
+
+  // Display credits using ShopManager and your update function
+  const coachCredits = ShopManager.getValue(data, "coach_credit") || 0;
+  updateCreditsDisplay(coachCredits);
+
+  // Sync hunger and display bar
+  const currentHunger = HungerManager.syncFromTimestamp();
+  updateHungerBar(currentHunger);
+}
+
+
+
+
+const prices = {
+  burger: 15,
+  taco: 12,
+  pizza: 25
+};
+
+function buyBurger() {
+  let data = ShopManager.loadIni();
+
+  let credits = ShopManager.getValue(data, "coach_credit") || 0;
+  let stock = ShopManager.getValue(data, "burgerStock") || 0;
+  let inventory = ShopManager.getValue(data, "burgers") || 0;
+  const burgerCost = prices.burger; // 15
+
+  if (stock <= 0) {
+    alert("No burgers left in stock!");
+    return;
+  }
+  if (credits < burgerCost) {
+    alert("Not enough credits!");
+    return;
+  }
+
+  credits -= burgerCost;
+  stock -= 1;
+  inventory += 1;
+
+  data = ShopManager.setValue(data, "coach_credit", credits);
+  data = ShopManager.setValue(data, "burgerStock", stock);
+  data = ShopManager.setValue(data, "burgers", inventory);
+
+  ShopManager.saveIni(data);
+
+  // Update UI immediately:
+  updateShopDisplay();
+  updateCreditsDisplay(credits);
+}
+
+function buyTaco() {
+  let data = ShopManager.loadIni();
+
+  let credits = ShopManager.getValue(data, "coach_credit") || 0;
+  let stock = ShopManager.getValue(data, "tacoStock") || 0;
+  let inventory = ShopManager.getValue(data, "tacos") || 0;
+  const tacoCost = prices.taco; // 12
+
+  if (stock <= 0) {
+    alert("No tacos left in stock!");
+    return;
+  }
+  if (credits < tacoCost) {
+    alert("Not enough credits!");
+    return;
+  }
+
+  credits -= tacoCost;
+  stock -= 1;
+  inventory += 1;
+
+  data = ShopManager.setValue(data, "coach_credit", credits);
+  data = ShopManager.setValue(data, "tacoStock", stock);
+  data = ShopManager.setValue(data, "tacos", inventory);
+
+  ShopManager.saveIni(data);
+
+  // Update UI immediately:
+  updateShopDisplay();
+  updateCreditsDisplay(credits);
+}
+
+function buyPizza() {
+  let data = ShopManager.loadIni();
+
+  let credits = ShopManager.getValue(data, "coach_credit") || 0;
+  let stock = ShopManager.getValue(data, "pizzaStock") || 0;
+  let inventory = ShopManager.getValue(data, "pizzas") || 0;
+  const pizzaCost = prices.pizza; // 25
+
+  if (stock <= 0) {
+    alert("No pizzas left in stock!");
+    return;
+  }
+  if (credits < pizzaCost) {
+    alert("Not enough credits!");
+    return;
+  }
+
+  credits -= pizzaCost;
+  stock -= 1;
+  inventory += 1;
+
+  data = ShopManager.setValue(data, "coach_credit", credits);
+  data = ShopManager.setValue(data, "pizzaStock", stock);
+  data = ShopManager.setValue(data, "pizzas", inventory);
+
+  ShopManager.saveIni(data);
+
+  // Update UI immediately:
+  updateShopDisplay();
+  updateCreditsDisplay(credits);
+}
+
+
+
+
+
+   
+ document.getElementById("buyBurgerBtn").addEventListener("click", buyBurger);
+        document.getElementById("buyTacoBtn").addEventListener("click", buyTaco);
+document.getElementById("buyPizzaBtn").addEventListener("click", buyPizza);
+
+
+function updateRestockTimer() {
+  const el = document.getElementById("restockTimer");
+  if (!el) return;
+
+  const data = ShopManager.loadIni();
+  const lastUpdate = ShopManager.getValue(data, "shop_updated") || 0;
+  const now = Date.now();
+
+  const restockInterval = 5 * 60 * 1000; // 5 minutes in ms
+  const timeElapsed = now - lastUpdate;
+  const timeLeft = restockInterval - timeElapsed;
+
+  if (timeLeft <= 0) {
+    el.textContent = "Shop is restocking now!";
+  } else {
+    const minutes = Math.floor(timeLeft / 60000);
+    const seconds = Math.floor((timeLeft % 60000) / 1000);
+    el.textContent = `Shop will restock in ${minutes}m ${seconds}s`;
+  }
+}
+
+function initializeIniData() {
+  let data = localStorage.getItem("RetroBowl.0.savedata.ini");
+  if (!data || data.trim() === "") {
+    const now = Date.now();
+    data = [
+      `hunger="70"`,
+      `hunger_updated="${now}"`,
+      `shop_updated="${now}"`,
+      `burgerStock="3"`,
+      `tacoStock="3"`,
+      `pizzaStock="1"`,
+      `burgers="0"`,
+      `tacos="0"`,
+      `pizzas="0"`
+    ].join("\n");
+    localStorage.setItem("RetroBowl.0.savedata.ini", data);
+  }
+}
+
+window.onload = function () {
+  initializeIniData();
+  loadIniFile((data) => {
+    init(data);
+    updateShopDisplay();
+    updateRestockTimer();
+    setInterval(updateRestockTimer, 1000);
+  });
+};
+
+
+
+
+</script>
+      
+ 
+</html>
