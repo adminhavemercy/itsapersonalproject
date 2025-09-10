@@ -84,12 +84,18 @@
         }
 
         /* Game canvas styling */
-        canvas {
-            width: 100%;
-            height: 100%; /* Take up the full height of the screen */
-            margin-top: 0; /* Remove any space above the canvas */
-            display: block; /* Ensure canvas is displayed as block level element */
-        }
+ /* Make the canvas take up the full width of the screen and maintain aspect ratio */
+    canvas {
+        width: 100%;
+        height: auto; /* Let the height adjust automatically to preserve aspect ratio */
+        margin-top: 0;
+        display: block;
+        max-width: 100%; /* Prevent the canvas from stretching too wide */
+    }
+
+        #canvas { width: 100%; 
+                 height: auto;
+                 max:width
 
         /* Ensure responsive design */
         @media (max-width: 768px) {
@@ -146,6 +152,25 @@
     <!-- Run the game code -->
     <script class="supersigma" type="text/javascript" src="html5game/RetroBowl.js?ILABC=1551937871"></script>
 
+
+    <script>
+    // Make sure to adjust the canvas size dynamically on window resize
+    function resizeCanvas() {
+        var canvas = document.getElementById('canvas');
+        var width = window.innerWidth; // Get the width of the screen
+        var aspectRatio = 640 / 360;  // Define the aspect ratio (640px / 360px)
+
+        // Adjust the width of the canvas and maintain the aspect ratio for the height
+        canvas.width = width;
+        canvas.height = width / aspectRatio;
+    }
+
+    // Call the function on window resize
+    window.addEventListener('resize', resizeCanvas);
+
+    // Call it initially to set the correct size on page load
+    resizeCanvas();
+</script>
     <!-- Poki SDK integration -->
     <script src="patch/js/poki-sdk.js"></script>
     <script>
