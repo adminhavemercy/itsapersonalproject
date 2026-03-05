@@ -9,7 +9,7 @@
 7	Illinois	L.V	$ffa800	$660066	$660066	$660066	$ffa800	$ffffff	$ffa800	$ffa800	$ffa800	$660066	$ffffff	$ffffff	$dfdfdf	$ffffff	$dfdfdf	$efefef	$ffa800	$660066	$ffffff	$ffffff	$ffa800	$ffa800	$ffa800	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	1	5	0	$660066
 8	Ole Miss	BAL	$0000cc	$cc9900	$0000cc	$ffffff	$ffffff	$ffffff	$0000cc	$ffffff	$0000cc	$cc9900	$ffffff	$ffffff	$ffffff	$cc9900	$0000cc	$dfdfdf	$0000cc	$cc9900	$0000cc	$ffffff	$ffffff	$0000cc	$0000cc	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	45	19	$cc9900
 9	Texas S.	CIN	$ffd799	$e00000	$e00000	$e00000	$ffd799	$ffd799	$ffd799	$ffd799	$ffffff	$ffd799	$ffffff	$ffffff	$ffffff	$ffffff	$dfdfdf	$efefef	$fffdd0	$000442	$000442	$000442	$000442	$000442	$000442	$fffdd0	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	42	14	$e00000
-10	Texas A&M	CLE	$500000	$ffffff	$500000	$ffffff	$ffffff	$ffffff	$dfdfdf	$dfdfdf	$500000	$ffffff	$ffffff	$500000	$ffffff	$ffffff	$dfdfdf	$efefef	$c00000	$ffffff	$500000	$000000	$500000	$500000	$500000	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	40	61	$500000
+10	Texas A&M	CLE	$500000	$ffffff	$500000	$ffffff	$ffffff	$ffffff	$dfdfdf	$dfdfdf	$500000	$ffffff	$ffffff	$500000	$ffffff	$ffffff	$dfdfdf	$efefef	$500000	$ffffff	$500000	$000000	$500000	$500000	$500000	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	40	61	$500000
 11	Texas	PIT	$ffffff	$ffa800	$ffa800	$ffffff	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffa800	$ffa800	$ffffff	$ffffff	$ffffff	$ffa800	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	38	27	$ffa800
 12	Vanderbilt	CAR	$ffffff	$ffd700	$000000	$000000	$ffffff	$ffffff	$000000	$000000	$000000	$ffd700	$ffffff	$ffffff	$000000	$000000	$000000	$000000	$000000	$ffd700	$000000	$000000	$000000	$ffd700	$000000	$000000	$ffffff	$ffd700	$ffffff	$ffffff	$ffffff	$000000	$000000	$000000	0	44	2	$ffd700
 13	Alabama	IND	$660000	$ffffff	$660000	$660000	$ffffff	$ffffff	$ffffff	$ffffff	$660000	$ffffff	$ffffff	$ffffff	$ffffff	$660000	$dfdfdf	$dfdfdf	$c0c0c0	$660000	$660000	$660000	$c0c0c0	$660000	$c0c0c0	$c0c0c0	$000000	$660000	$000000	$660000	$000000	$660000	$000000	$660000	1	42	21	$660000
@@ -31,6 +31,7 @@
 29	Georgia	CAR	$800000	$000000	$800000	$800000	$ffffff	$000000	$ffffff	$ffffff	$800000	$000000	$ffffff	$ffffff	$dfdfdf	$800000	$800000	$800000	$800000	$000000	$000000	$000000	$dfdfdf	$800000	$800000	$800000	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	45	2	$681818
 30	West Virginia	N.O	$0000cc	$FFd700	$FFd700	$FFd700	$FFd700	$FFd700	$FFd700	$FFd700	$0000cc	$FFd700	$ffffff	$ffffff	$ffd700	$ffd700	$0000d0	$0000d0	$fffdd0	$000442	$000442	$000442	$000442	$000442	$000442	$fffdd0	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	1	63	0	$FFd700
 31	Tampa Bay	T.B	$ffffff	$0000cc	$0000cc	$0000cc	$ffffff	$ffd700	$ffffff	$ffffff	$ffffff	$0000cc	$ffffff	$ffffff	$ffffff	$ffd700	$ffffff	$ffffff	$ffffff	$0000cc	$ffd700	$0000cc	$ffffff	$ffd700	$ffffff	$ffffff	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	50	0	$0000cc
+
 
 
 
