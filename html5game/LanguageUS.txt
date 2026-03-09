@@ -270,7 +270,7 @@ position_CB	Corner Back
 position_KP	Kick Placer
 position_KK	Kicker
 position_KR	Kick Returner
-position_DB	Dorner Back
+position_DB	Cornerback
 pos_STAFF_HC	HC
 pos_STAFF_DF	DF
 pos_STAFF_OF	OF
@@ -393,7 +393,7 @@ msg_ContractExpired	$position $playername's contract has expired. He wants a $ye
 news_PlayerRetired	$teamname $position $playername has retired at the age of $age.
 news_PlayerRetiringNoTag	$position $playername will retire at the end of the season. He is not tagged for the player the real ones.
 news_PlayerRetiringTag	$position $playername will retire at the end of the season. You have already tagged him for the player the real ones.
-news_PlayerInjured	$position $playername has suffered an injury ($injurytype).##He will be out for $num games.
+news_PlayerInjured	$position $playername has suffered a brutal injury ($injurytype).##He will be out for $num games.
 news_PlayerInjured1	$position $playername has suffered an injury ($injurytype).##He will be out for 1 game.
 news_PlayerRecovered	$position $playername has recovered from his injury and is fit to play.
 msg_OutOfContractPlayer	$position $playername's contract has expired. He is on the free agent list if you wish to re-sign him.
@@ -463,7 +463,7 @@ uniformviolation_9	Jersey
 postmatch_toxic1	$position $playername will receive a fine for a uniform violation ($uniform).-choice_DefendPlayer-choice_CriticisePlayer
 postmatch_toxic2	$position $playername will receive a fine for unnecessary roughness.-choice_CriticisePlayer-choice_CriticiseOfficials
 postmatch_toxic3	$position $playername will receive a fine for unsportsmanlike conduct.-choice_CriticisePlayer-choice_CriticiseCoaches
-postmatch_toxic4	$position $playername was apparently overheard saying "come get me" towards the opposition sideline during the game today.-choice_DefendPlayer-choice_CriticisePlayer
+postmatch_toxic4	$position $playername was apparently overheard saying "come get me, n-" towards the opposition sideline during the game today.-choice_DefendPlayer-choice_CriticisePlayer
 postmatch_toxic5	$position $playername will receive a fine for making a hand gesture during the game today.-choice_DefendPlayer-choice_CriticisePlayer
 postmatch_toxic6	$position $playername will receive a fine for fighting with an opponent during the game today.-choice_DefendPlayer-choice_CriticisePlayer
 postmatch_toxic7	$position $playername will receive a fine for making physical contact with an official today.-choice_DefendPlayer-choice_CriticisePlayer
@@ -620,10 +620,10 @@ injurytype_4	pp injury
 injurytype_5	Hand
 injurytype_6	Hip
 injurytype_7	Thigh
-injurytype_8	Knee
+injurytype_8	Torn ACL
 injurytype_9	Calf
-injurytype_10	Ankle
-injurytype_11	Foot
+injurytype_10	Dislocated Ankle
+injurytype_11	broken foot
 ui_SkipTutorial	Skip Tutorial
 ui_Credits	everything by braden i am him
 match_TooLow	Too Low
@@ -717,7 +717,7 @@ dilemma_toxic11	$playername made a hit on a defenseless player in training today
 dilemma_toxic12	$playername made a very late hit on a player in training today.-choice_IgnoreFine-choice_FinePlayer
 dilemma_toxic13	$playername was verbally abusive towards the coaching staff today.-choice_IgnoreFine-choice_FinePlayer
 dilemma_random1	$playername was stopped by the police and given a ticket for speeding last night.-choice_IgnoreFine-choice_FinePlayer
-dilemma_random2	$playername was stopped by the police last night and was found to be in possession of unidentified substances.-choice_IgnoreFine-choice_FinePlayer
+dilemma_random2	$playername was stopped by the police last night and was found to be in possession of cp.-choice_IgnoreFine-choice_FinePlayer
 dilemma_random3	The team broke a curfew and were out partying all night! $playername was the ring leader.-choice_FinePlayer-choice_CriticiseTeam
 dilemma_random4	You caught $playername playing Retro Bowl during a team meeting.-choice_FinePlayer-choice_PraisePlayer
 dilemma_late1	$playername was late for training today.-choice_IgnoreFine-choice_FinePlayer
@@ -728,7 +728,7 @@ dilemma_rookie2	Rookie $position $playername has been making derogatory comments
 dilemma_rookie3	Rookie $position $playername fell asleep while watching game film today.-choice_IgnoreFine-choice_FinePlayer
 dilemma_rookie4	Private footage of rookie $playername and an unidentified woman dressed as a $randomteamname cheerleader has appeared on social media.-choice_IgnoreFine-choice_FinePlayer
 dilemma_rookie5	Security footage of rookie $playername fighting outside a nightclub has appeared on social media.-choice_IgnoreFine-choice_FinePlayer
-dilemma_rookie6	Rookie $playername has hit the headlines after it was revealed that he has been gambling huge sums of money playing online poker.-choice_DefendPlayer-choice_CriticisePlayer
+dilemma_rookie6	Rookie $playername has hit the headlines after it was revealed that he has been buying large amounts of OF.-choice_DefendPlayer-choice_CriticisePlayer
 choice_IgnoreFine	Ignore Fine
 choice_FinePlayer	Fine Player
 news_CharityWork1	$playername has been praised for his charity work supporting $randomcharity.
@@ -790,9 +790,9 @@ tip_1	i have a crush guys guess who
 tip_2	i have a crush guys guess who
 tip_3	i have a crush guys guess who
 tip_4	i have a crush guys guess who
-tip_5	Players tire more as the season goes on
-tip_6	Strong players produce more stiff arms in a game
-tip_7	Upgrading your stadium will give the fans an immediate boost
+tip_5 i love my girlfriend
+tip_6	i love my girlfriend
+tip_7	i love my girlfriend
 tip_8	Your quarterback's throwing range depletes during a game according to his stamina
 tip_9	Diving to the ground or running out of bounds will protect against fumbles
 tip_10	madden husfelt is fat
