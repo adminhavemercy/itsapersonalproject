@@ -7,7 +7,7 @@
 5	UCLA	K.C	$ffd799	$2774AE	$2774AE	$ffffff	$ffd799	$ffd799	$dfdfdf	$dfdfdf	$ffd799	$2774AE	$ffffff	$2774AE	$ffd799	$ffd799	$dfdfdf	$dfdfdf	$2774AE	$ffd799	$2774AE	$2774AE	$2774AE	$2774AE	$2774AE	$2774AE	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	40	15	$2774AE
 6	Michigan S.	LAC	$00cc00	$cccccc	$00cc00	$cccccc	$cccccc	$00cc00	$00cc00	$cccccc	$ffffff	$00cc00	$ffffff	$00cc00	$ffffff	$00cc00	$00cc00	$ffffff	$00cc00	$cccccc	$00cc00	$cccccc	$00cc00	$00cc00	$00cc00	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	17	0	$00cc00
 7	Illinois	L.V	$ffa800	$660066	$660066	$660066	$ffa800	$ffffff	$ffa800	$ffa800	$ffa800	$660066	$ffffff	$ffffff	$dfdfdf	$ffffff	$dfdfdf	$efefef	$ffa800	$660066	$ffffff	$ffffff	$ffa800	$ffa800	$ffa800	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	1	5	0	$660066
-8	Ole Miss	BAL	$0000cc	$cc9900	$0000cc	$ffffff	$ffffff	$ffffff	$0000cc	$ffffff	$0000cc	$cc9900	$ffffff	$ffffff	$ffffff	$cc9900	$0000cc	$dfdfdf	$0000cc	$cc9900	$0000cc	$ffffff	$ffffff	$0000cc	$0000cc	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	45	19	$cc9900
+8	Ole Miss	BAL	$006BA6	$cc9900	$006BA6	$ffffff	$ffffff	$ffffff	$006BA6	$ffffff	$006BA6	$cc9900	$ffffff	$ffffff	$ffffff	$cc9900	$006BA6	$dfdfdf	$0000cc	$cc9900	$0000cc	$ffffff	$ffffff	$0000cc	$0000cc	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	45	19	$cc9900
 9	Texas T.	TXT	$000000	$800000	$800000	$000000	$000000	$ffffff	$000000	$dfdfdf	$000000	$800000	$ffffff	$800000	$000000	$800000	$000000	$dfdfdf	$000000	$800000	$800000	$000000	$800000	$ffffff	$999999	$800000	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	24	1	$681818
 10	Texas A&M	CLE	$500000	$ffffff	$500000	$ffffff	$ffffff	$ffffff	$dfdfdf	$dfdfdf	$500000	$ffffff	$ffffff	$500000	$ffffff	$ffffff	$dfdfdf	$efefef	$500000	$ffffff	$500000	$000000	$500000	$500000	$500000	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	40	61	$500000
 11	Texas	PIT	$ffffff	$ffa800	$ffa800	$ffffff	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffffff	$ffffff	$ffa800	$ffffff	$ffffff	$ffa800	$ffa800	$ffffff	$ffffff	$ffffff	$ffa800	$dfdfdf	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	38	27	$ffa800
@@ -31,6 +31,7 @@
 29	Georgia	CAR	$800000	$000000	$800000	$800000	$ffffff	$000000	$ffffff	$ffffff	$800000	$000000	$ffffff	$ffffff	$dfdfdf	$800000	$800000	$800000	$800000	$000000	$000000	$000000	$dfdfdf	$800000	$800000	$800000	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	45	2	$681818
 30	Indiana	IN.	$a82016	$000000	$a82016	$a82016	$ffffff	$000000	$ffffff	$ffffff	$dfdfdf	$a82016	$ffffff	$ffffff	$dfdfdf	$a82016	$ffffff	$ffffff	$fffdd0	$000442	$000442	$000442	$000442	$000442	$000442	$fffdd0	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	38	31	$B44E18
 31	Tampa Bay	T.B	$ffffff	$0000cc	$0000cc	$0000cc	$ffffff	$ffd700	$ffffff	$ffffff	$ffffff	$0000cc	$ffffff	$ffffff	$ffffff	$ffd700	$ffffff	$ffffff	$ffffff	$0000cc	$ffd700	$0000cc	$ffffff	$ffd700	$ffffff	$ffffff	$000442	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$fffdd0	$000442	0	50	0	$0000cc
+
 
 
 
