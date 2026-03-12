@@ -1432,3 +1432,5 @@ aa_info_StartWithFave	Retro Bowl+ is a game all about building a legacy. If you 
 ui_NoOffers	No Offers
 ui_OneOffer	1 Offer
 ui_Offers	Offers
+ui_Score	Score
+ui_Best	Best
