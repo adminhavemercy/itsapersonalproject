@@ -788,8 +788,8 @@ ui_Tip	Tip
 ui_Tips	Tips
 tip_1	i have a crush guys guess who
 tip_2	i have a crush guys guess who
-tip_3	i have a crush guys guess who
-tip_4	i have a crush guys guess who
+tip_3	ngr
+tip_4	frick john
 tip_5 i love my girlfriend
 tip_6	i love my girlfriend
 tip_7	i love my girlfriend
