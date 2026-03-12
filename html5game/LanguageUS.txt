@@ -1434,3 +1434,4 @@ ui_OneOffer	1 Offer
 ui_Offers	Offers
 ui_Score	Score
 ui_Best	Best
+match_Hit Hit
