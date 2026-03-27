@@ -162,8 +162,8 @@ ui_Leaderboard_QB	QB Leaderboard
 ui_Name	Name
 ui_News	News
 ui_Traits	Traits
-conf_AFC	AFC
-conf_NFC	NFC
+conf_AFC	FBS I
+conf_NFC	FBS II
 division_East	East
 division_West	West
 division_North	North
