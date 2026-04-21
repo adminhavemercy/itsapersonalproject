@@ -786,13 +786,13 @@ msg_Welcome	Welcome to Retro Bowl!##You are about to start your first season as 
 msg_LimitedVersion	*** Limited Version - $num games remaining ***
 ui_Tip	Tip
 ui_Tips	Tips
-tip_1	i have a crush guys guess who
-tip_2	i have a crush guys guess who
-tip_3	ngr
-tip_4	frick john
-tip_5 i love my girlfriend
-tip_6	i love my girlfriend
-tip_7	i love my girlfriend
+tip_1
+tip_2
+tip_3	
+tip_4
+tip_5
+tip_6	
+tip_7	
 tip_8	Your quarterback's throwing range depletes during a game according to his stamina
 tip_9	Diving to the ground or running out of bounds will protect against fumbles
 tip_10	madden husfelt is fat
