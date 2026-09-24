@@ -586,7 +586,7 @@ ui_FirstName	First Name
 ui_LastName	Last Name
 ui_NewCareer	New Career
 news_NewCareer	With just $num $weeks left in the regular season $teamname have appointed $coachname as their new head coach.##$lname has worked at the college level for several years and was excelling as the head coach of $randomcollegename before taking the reins at $teamname.
-ui_StartWithFave	Start with favorite team dont do it.?
+ui_StartWithFave	Start with favorite team?
 msg_Intro_1	Welcome to $teamname!##This is your home screen. You can tap on the division table to view divisions and the schedule.##When you are ready tap the F.OFFICE button.
 msg_Intro_1_gp	Welcome to $teamname!##This is your home screen. You can use ² or the - Button to view divisions and the schedule.##When you are ready highlight the F.OFFICE button and press ¹.
 msg_Intro_1_gp_xb	Welcome to $teamname!##This is your home screen. You can use ² to view divisions and the schedule.##When you are ready highlight the F.OFFICE button and press º.
@@ -1025,8 +1025,8 @@ favorite_DoingWellReturn	Fans of $favteamname, currently $record, have been call
 favorite_DoingPoorly	It's no secret that $favteamname owner will be looking for a new head coach at the end of the season but it seems unlikely that $yourname will be amongst the candidates.
 msg_SalaryCheckRoster	You need to reduce your roster to 10 players before you can reduce the salary cap.
 ui_Update	Update
-ui_Roster10	12 Man
-ui_Roster12	16 Man
+ui_Roster10	10 Man
+ui_Roster12	12 Man
 msg_FansGood1	The fanbase has grown this season but expectations are higher!
 msg_FansGood2	ur getting fired bud
 msg_FansGood3	lock in fr
