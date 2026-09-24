@@ -743,7 +743,7 @@ ui_Achievements	Achievements
 btn_HallOfFame	Hall of#Fame
 ui_HallOfFame	the real ones
 ui_RetroBowls	Super Bowls
-ui_RetroBowl	Super Bowl
+ui_RetroBowl	Retro Bowl
 pos_1	1st
 pos_2	2nd
 pos_3	3rd
@@ -1374,7 +1374,7 @@ ui_Info	Info
 btn_GenerateCharacter	Random#Character
 msg_NeedBossHead	You need to select a face for yourself.##Tap on the head coach card to choose an image.
 info_HeadCoach	This is you! Your morale is affected by team morale and fan approval. Your star rating will increase with victories!
-ui_RetroBowlRecord	Super Bowl Record
+ui_RetroBowlRecord	Retro Bowl Record
 tla_RBMVP	hero
 msg_RetroBowlMVPWinner	$playername was named the hero!
 btn_Achievements	Achieve-#ments
